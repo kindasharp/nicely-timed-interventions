@@ -72,6 +72,33 @@
       font-size: 0.9rem;
       color: #777;
     }
+    form {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form input, form textarea {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #555;
+    }
   </style>
 </head>
 <body>
@@ -120,9 +147,13 @@
     <section class="quilt-tile">
       <img src="contact.jpg" alt="Contact Icon">
       <h2>Get in Touch</h2>
-      <p>Email <a href="mailto:kevan@kindasharp.com">kevan@kindasharp.com</a><br />
-         or text <strong>(xxx) xxx-xxxx</strong><br />
-         for availability and rates.</p>
+      <p>Email <a href="mailto:kevan@kindasharp.com">kevan@kindasharp.com</a></p>
+      <form action="https://formspree.io/f/maylbqjy" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </section>
   </section>
 
