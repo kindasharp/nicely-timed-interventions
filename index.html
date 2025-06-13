@@ -1,146 +1,113 @@
-<!-- Nicely Timed Interventions – Personal Website (Starter Template) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicely Timed Interventions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <style>
     body {
       margin: 0;
-      font-family: "Avenir", sans-serif;
-      background: #fefdf9;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f7f4;
       color: #333;
-      line-height: 1.6;
-    }
-    .site-header, .site-footer {
-      background: #e3d8c1;
-      text-align: center;
-      padding: 2rem 1rem;
-      border-bottom: 5px solid #b93;
-    }
-    .site-header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-    .tagline {
-      font-style: italic;
-      color: #664d03;
-    }
-    .quilt-layout {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 2rem;
     }
+    header {
+      text-align: center;
+      max-width: 800px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p.lead {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .quilt {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+    }
     .quilt-tile {
-      background: #fff;
+      background-color: #fff;
       padding: 1.5rem;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .quilt-tile:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
-    .quilt-tile h2 {
-      margin-top: 0;
-      color: #8a5411;
+    h2 {
+      font-size: 1.5rem;
+      margin: 1rem 0 0.5rem;
     }
-    form {
-      display: grid;
-      gap: 0.75rem;
-      margin-top: 1rem;
+    p {
+      font-size: 1rem;
     }
-    input, textarea {
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: inherit;
-    }
-    button {
-      padding: 0.6rem 1rem;
-      background: #8a5411;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    button:hover {
-      background: #a7641f;
-    }
-    .site-footer {
-      background: #e3d8c1;
-      color: #5a3d00;
+    footer {
+      margin-top: 4rem;
       font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Nicely Timed Interventions</h1>
-    <p class="tagline">Thoughtful tech help for the modern Midwesterner</p>
+  <header>
+    <h1>Nicely Timed Interventions by Kevan</h1>
+    <p class="lead">Helping you with techy things just when you need it most. Like a neighbor who knows what all the cords do.</p>
   </header>
 
-  <main class="quilt-layout">
+  <section class="quilt">
     <section class="quilt-tile">
+      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_x62chJ.json" background="transparent" speed="1" style="width: 120px; height: 120px; margin-bottom: 1rem;" loop autoplay></lottie-player>
       <h2>Entertainment Center Setup</h2>
       <p>I’ll untangle cords, get your TV and sound system humming, and teach you how to use your remotes—without making you feel silly.</p>
     </section>
 
     <section class="quilt-tile">
+      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_HpFqiS.json" background="transparent" speed="1" style="width: 120px; height: 120px; margin-bottom: 1rem;" loop autoplay></lottie-player>
       <h2>Streaming Simplified</h2>
-      <p>Netflix? Hulu? Prime? I’ll help you log in, remember passwords, and make sense of subscription options. We’ll make it easy and friendly.</p>
+      <p>Netflix, Prime, Apple TV+, PBS Passport—whatever it is, I’ll show you how to find what you want and stop paying for things you don’t use.</p>
     </section>
 
     <section class="quilt-tile">
+      <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_jxqjhreh.json" background="transparent" speed="1" style="width: 120px; height: 120px; margin-bottom: 1rem;" loop autoplay></lottie-player>
       <h2>Wi-Fi & Home Networking</h2>
-      <p>Dead zones and blinking routers begone! I’ll optimize your home network, explain what’s happening, and leave it better than I found it.</p>
+      <p>Slow or spotty Wi-Fi? I’ll diagnose the issue and get your devices talking to each other—securely and smoothly.</p>
     </section>
 
     <section class="quilt-tile">
+      <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_tfbjz7.json" background="transparent" speed="1" style="width: 120px; height: 120px; margin-bottom: 1rem;" loop autoplay></lottie-player>
       <h2>Special Projects</h2>
-      <p>Need a printer, scanner, or smart camera set up? Want to display family photos on your Apple TV? I’m on it.</p>
+      <p>Setting up printers, scanners, smart speakers, photo albums, or family tech archives. Weird stuff welcome!</p>
     </section>
 
     <section class="quilt-tile">
+      <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_HS6Q6n.json" background="transparent" speed="1" style="width: 120px; height: 120px; margin-bottom: 1rem;" loop autoplay></lottie-player>
       <h2>Buying Advice</h2>
-      <p>Before you buy that new gadget, talk to me. I can help you choose wisely, avoid overspending, and find the right fit for your needs.</p>
+      <p>Thinking of buying a new computer, phone, or TV? I’ll help you choose the right gear at the right price—and avoid the upsell.</p>
     </section>
 
     <section class="quilt-tile">
+      <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_gxq3pijg.json" background="transparent" speed="1" style="width: 120px; height: 120px; margin-bottom: 1rem;" loop autoplay></lottie-player>
       <h2>Tip Jar & Monthly Help</h2>
-      <p>If you find my help valuable, I welcome tips or a modest monthly thank-you to keep me caffeinated and coming back.</p>
+      <p>Pay once, or set up a regular visit or check-in. I can swing by monthly to tidy your tech and keep things running smoothly.</p>
     </section>
+  </section>
 
-    <section class="quilt-tile about">
-      <h2>Who Is Kevan?</h2>
-      <p>I’m Kevan—a semi-retired, tech-savvy Midwesterner with a David Sedaris sense of humor and a knack for solving everyday problems with patience and a touch of style. I believe no one should feel dumb around a blinking light.</p>
-    </section>
-
-    <section class="quilt-tile contact">
-      <h2>Contact Me</h2>
-      <p>Have a tech tangle or a gadget grievance? Let’s fix it. Email me at <a href="mailto:kevan@example.com">kevan@example.com</a> or use the form below:</p>
-      <form action="https://formspree.io/f/example" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">What’s going on?</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2025 Kevan Sharp · Nicely Timed Interventions</p>
+  <footer>
+    <p>&copy; 2025 Nicely Timed Interventions. Built by Kevan.</p>
   </footer>
 </body>
 </html>
