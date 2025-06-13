@@ -1,0 +1,146 @@
+<!-- Nicely Timed Interventions – Personal Website (Starter Template) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicely Timed Interventions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Avenir", sans-serif;
+      background: #fefdf9;
+      color: #333;
+      line-height: 1.6;
+    }
+    .site-header, .site-footer {
+      background: #e3d8c1;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 5px solid #b93;
+    }
+    .site-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .tagline {
+      font-style: italic;
+      color: #664d03;
+    }
+    .quilt-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .quilt-tile {
+      background: #fff;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .quilt-tile:hover {
+      transform: translateY(-5px);
+    }
+    .quilt-tile h2 {
+      margin-top: 0;
+      color: #8a5411;
+    }
+    form {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    button {
+      padding: 0.6rem 1rem;
+      background: #8a5411;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #a7641f;
+    }
+    .site-footer {
+      background: #e3d8c1;
+      color: #5a3d00;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Nicely Timed Interventions</h1>
+    <p class="tagline">Thoughtful tech help for the modern Midwesterner</p>
+  </header>
+
+  <main class="quilt-layout">
+    <section class="quilt-tile">
+      <h2>Entertainment Center Setup</h2>
+      <p>I’ll untangle cords, get your TV and sound system humming, and teach you how to use your remotes—without making you feel silly.</p>
+    </section>
+
+    <section class="quilt-tile">
+      <h2>Streaming Simplified</h2>
+      <p>Netflix? Hulu? Prime? I’ll help you log in, remember passwords, and make sense of subscription options. We’ll make it easy and friendly.</p>
+    </section>
+
+    <section class="quilt-tile">
+      <h2>Wi-Fi & Home Networking</h2>
+      <p>Dead zones and blinking routers begone! I’ll optimize your home network, explain what’s happening, and leave it better than I found it.</p>
+    </section>
+
+    <section class="quilt-tile">
+      <h2>Special Projects</h2>
+      <p>Need a printer, scanner, or smart camera set up? Want to display family photos on your Apple TV? I’m on it.</p>
+    </section>
+
+    <section class="quilt-tile">
+      <h2>Buying Advice</h2>
+      <p>Before you buy that new gadget, talk to me. I can help you choose wisely, avoid overspending, and find the right fit for your needs.</p>
+    </section>
+
+    <section class="quilt-tile">
+      <h2>Tip Jar & Monthly Help</h2>
+      <p>If you find my help valuable, I welcome tips or a modest monthly thank-you to keep me caffeinated and coming back.</p>
+    </section>
+
+    <section class="quilt-tile about">
+      <h2>Who Is Kevan?</h2>
+      <p>I’m Kevan—a semi-retired, tech-savvy Midwesterner with a David Sedaris sense of humor and a knack for solving everyday problems with patience and a touch of style. I believe no one should feel dumb around a blinking light.</p>
+    </section>
+
+    <section class="quilt-tile contact">
+      <h2>Contact Me</h2>
+      <p>Have a tech tangle or a gadget grievance? Let’s fix it. Email me at <a href="mailto:kevan@example.com">kevan@example.com</a> or use the form below:</p>
+      <form action="https://formspree.io/f/example" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">What’s going on?</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Kevan Sharp · Nicely Timed Interventions</p>
+  </footer>
+</body>
+</html>
