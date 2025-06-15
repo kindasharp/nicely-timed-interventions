@@ -21,11 +21,10 @@
       max-width: 800px;
     }
     h1 {
-      font-size: 3.25rem;
+      font-size: 2.8rem;
       margin-bottom: 0.5rem;
       font-weight: 700;
-      color: #1e1e1e;
-      text-shadow: 1px 1px 0px #ccc;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
     p.lead {
       font-size: 1.2rem;
@@ -75,15 +74,60 @@
       font-size: 0.9rem;
       color: #777;
     }
-    form {
+    .contact-intro {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .contact-intro p {
+      font-size: 1.2rem;
+    }
+    .contact-intro button {
       margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+    .contact-intro button:hover {
+      background-color: #555;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 500px;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #999;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #333;
     }
     form input, form textarea {
       width: 100%;
-      max-width: 400px;
       margin-bottom: 1rem;
       padding: 0.75rem;
       border-radius: 8px;
@@ -146,19 +190,24 @@
       <h2>Tip Jar & Monthly Help</h2>
       <p>Pay once, or set up a regular visit or check-in. I can swing by monthly to tidy your tech and keep things running smoothly.</p>
     </section>
+  </section>
 
-    <section class="quilt-tile">
-      <img src="contact.jpg" alt="Contact Icon">
-      <h2>Get in Touch</h2>
-      <p>Email <a href="mailto:kevan@kindasharp.com">kevan@kindasharp.com</a></p>
+  <div class="contact-intro">
+    <p>Have a tech tangle or a gadget grievance?</p>
+    <button onclick="document.getElementById('contactModal').style.display='block'">Let’s fix it</button>
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('contactModal').style.display='none'">&times;</span>
       <form action="https://formspree.io/f/maylbqjy" method="POST">
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
         <textarea name="message" rows="4" placeholder="Your message" required></textarea>
         <button type="submit">Send</button>
       </form>
-    </section>
-  </section>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Nicely Timed Interventions. Built by Kevan.</p>
