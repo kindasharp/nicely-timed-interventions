@@ -21,10 +21,8 @@
       max-width: 800px;
     }
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
-      font-weight: 700;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
     p.lead {
       font-size: 1.2rem;
@@ -74,60 +72,43 @@
       font-size: 0.9rem;
       color: #777;
     }
-    .contact-intro {
-      margin-top: 3rem;
-      text-align: center;
-    }
-    .contact-intro p {
-      font-size: 1.2rem;
-    }
-    .contact-intro button {
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #333;
-      color: #fff;
-      cursor: pointer;
-    }
-    .contact-intro button:hover {
-      background-color: #555;
-    }
     .modal {
       display: none;
       position: fixed;
-      z-index: 999;
-      left: 0;
       top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
     }
     .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
+      background: white;
       padding: 2rem;
       border-radius: 12px;
-      max-width: 500px;
       position: relative;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
     .close {
       position: absolute;
-      top: 12px;
-      right: 16px;
+      top: 10px;
+      right: 15px;
       font-size: 1.5rem;
-      font-weight: bold;
-      color: #999;
       cursor: pointer;
     }
-    .close:hover {
-      color: #333;
+    form {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     form input, form textarea {
       width: 100%;
+      max-width: 400px;
       margin-bottom: 1rem;
       padding: 0.75rem;
       border-radius: 8px;
@@ -146,12 +127,25 @@
     form button:hover {
       background-color: #555;
     }
+    .open-modal {
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+    .open-modal:hover {
+      background-color: #555;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Nicely Timed Interventions</h1>
-    <p class="lead">Reasonable Confusion Management for the modern Midwesterner.</p>
+    <h1>Nicely Timed Interventions by Kevan</h1>
+    <p class="lead">Helping you with techy things just when you need it most. Like a neighbor who knows what all the cords do.</p>
   </header>
 
   <section class="quilt">
@@ -190,16 +184,18 @@
       <h2>Tip Jar & Monthly Help</h2>
       <p>Pay once, or set up a regular visit or check-in. I can swing by monthly to tidy your tech and keep things running smoothly.</p>
     </section>
+
+    <section class="quilt-tile">
+      <img src="contact.jpg" alt="Contact Icon">
+      <h2>Get in Touch</h2>
+      <p>Have a tech tangle or a gadget grievance?</p>
+      <button class="open-modal">Let's fix it</button>
+    </section>
   </section>
 
-  <div class="contact-intro">
-    <p>Have a tech tangle or a gadget grievance?</p>
-    <button onclick="document.getElementById('contactModal').style.display='block'">Let’s fix it</button>
-  </div>
-
-  <div id="contactModal" class="modal">
+  <div class="modal" id="contactModal">
     <div class="modal-content">
-      <span class="close" onclick="document.getElementById('contactModal').style.display='none'">&times;</span>
+      <span class="close" onclick="closeModal()">&times;</span>
       <form action="https://formspree.io/f/maylbqjy" method="POST">
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
@@ -212,5 +208,18 @@
   <footer>
     <p>&copy; 2025 Nicely Timed Interventions. Built by Kevan.</p>
   </footer>
+
+  <script>
+    const modal = document.getElementById("contactModal");
+    const openBtn = document.querySelector(".open-modal");
+    const closeModal = () => modal.style.display = "none";
+
+    openBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+    window.addEventListener("click", event => {
+      if (event.target === modal) closeModal();
+    });
+  </script>
 </body>
 </html>
